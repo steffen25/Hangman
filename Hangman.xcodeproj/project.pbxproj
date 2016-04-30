@@ -12,6 +12,9 @@
 		F906F81F1C7F189400AE30DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F906F81D1C7F189400AE30DB /* Main.storyboard */; };
 		F906F8211C7F189400AE30DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F906F8201C7F189400AE30DB /* Assets.xcassets */; };
 		F906F8241C7F189400AE30DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F906F8221C7F189400AE30DB /* LaunchScreen.storyboard */; };
+		F966EA741CD4D7A1001D1B1F /* EndGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F966EA731CD4D7A1001D1B1F /* EndGameVC.swift */; };
+		F9C443B31C7F20460071576A /* FEASFBRG.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F9C443B21C7F20460071576A /* FEASFBRG.TTF */; };
+		F9DD12051C7F5BFB00131A40 /* HangManGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD12041C7F5BFB00131A40 /* HangManGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		F906F8201C7F189400AE30DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F906F8231C7F189400AE30DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F906F8251C7F189400AE30DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F966EA731CD4D7A1001D1B1F /* EndGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameVC.swift; sourceTree = "<group>"; };
+		F9C443B21C7F20460071576A /* FEASFBRG.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = FEASFBRG.TTF; path = ../../../../Downloads/feast_of_flesh_bb/FEASFBRG.TTF; sourceTree = "<group>"; };
+		F9DD12041C7F5BFB00131A40 /* HangManGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangManGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		F906F8181C7F189400AE30DB /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
+				F9C443B11C7F20360071576A /* Fonts */,
 				F906F8191C7F189400AE30DB /* AppDelegate.swift */,
 				F906F81B1C7F189400AE30DB /* ViewController.swift */,
 				F906F81D1C7F189400AE30DB /* Main.storyboard */,
 				F906F8201C7F189400AE30DB /* Assets.xcassets */,
 				F906F8221C7F189400AE30DB /* LaunchScreen.storyboard */,
 				F906F8251C7F189400AE30DB /* Info.plist */,
+				F9DD12041C7F5BFB00131A40 /* HangManGame.swift */,
+				F966EA731CD4D7A1001D1B1F /* EndGameVC.swift */,
 			);
 			path = Hangman;
+			sourceTree = "<group>";
+		};
+		F9C443B11C7F20360071576A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F9C443B21C7F20460071576A /* FEASFBRG.TTF */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C443B31C7F20460071576A /* FEASFBRG.TTF in Resources */,
 				F906F8241C7F189400AE30DB /* LaunchScreen.storyboard in Resources */,
 				F906F8211C7F189400AE30DB /* Assets.xcassets in Resources */,
 				F906F81F1C7F189400AE30DB /* Main.storyboard in Resources */,
@@ -135,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F966EA741CD4D7A1001D1B1F /* EndGameVC.swift in Sources */,
+				F9DD12051C7F5BFB00131A40 /* HangManGame.swift in Sources */,
 				F906F81C1C7F189400AE30DB /* ViewController.swift in Sources */,
 				F906F81A1C7F189400AE30DB /* AppDelegate.swift in Sources */,
 			);
@@ -284,6 +304,7 @@
 				F906F82A1C7F189400AE30DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

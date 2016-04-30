@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FEASFBRG.TTF">
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+            <string>FeastofFleshBB</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +48,459 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="gdc-BY-pZZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X55-ri-Qvt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8p-Uw-u6e">
+                                        <rect key="frame" x="206" y="8" width="188" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="188" id="Fdn-IM-YFu"/>
+                                            <constraint firstAttribute="width" constant="188" id="Fel-S5-AR6"/>
+                                            <constraint firstAttribute="height" constant="39" id="p7P-V1-3Kt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="40"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Fdn-IM-YFu"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="C8p-Uw-u6e" firstAttribute="centerY" secondItem="X55-ri-Qvt" secondAttribute="centerY" id="294-be-4Zp"/>
+                                    <constraint firstItem="C8p-Uw-u6e" firstAttribute="top" secondItem="X55-ri-Qvt" secondAttribute="top" constant="8" id="PRW-Iz-yVR"/>
+                                    <constraint firstAttribute="height" constant="55" id="Xez-LQ-1mI"/>
+                                    <constraint firstAttribute="bottom" secondItem="C8p-Uw-u6e" secondAttribute="bottom" constant="8" id="Zvw-HU-c2w"/>
+                                    <constraint firstItem="C8p-Uw-u6e" firstAttribute="centerX" secondItem="X55-ri-Qvt" secondAttribute="centerX" id="xhn-VI-TjE"/>
+                                    <constraint firstItem="C8p-Uw-u6e" firstAttribute="centerX" secondItem="X55-ri-Qvt" secondAttribute="centerX" id="z5K-tC-KSY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PRW-Iz-yVR"/>
+                                        <exclude reference="Zvw-HU-c2w"/>
+                                        <exclude reference="z5K-tC-KSY"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hej med dig" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp6-n0-ZbK">
+                                <rect key="frame" x="117" y="80" width="366" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="366" id="GRJ-dv-POj"/>
+                                    <constraint firstAttribute="height" constant="50" id="eLl-1W-AUT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABX-TW-WFS">
+                                <rect key="frame" x="105" y="162" width="390" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwZ-9a-D2F">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="A">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSA-L7-G06"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyt-4d-BFp">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kmd-O9-Fut"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0e-4X-s7D">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEP-5Q-rQG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s63-Bd-Or8">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="D">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zx7-Ep-yS5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ID-Ys-ihJ">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="E">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9t-dk-jjV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqz-52-Yae">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="F">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SKP-PI-qwV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-jj-ZXw">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="G">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VHA-2V-oPz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgI-ix-IZ3">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="H">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonH:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xoD-Ab-VsY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-Ab-giE">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="I">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="73M-o9-h1e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iua-L6-Yrg">
+                                        <rect key="frame" x="270" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="J">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonJ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1YW-9y-vkA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAB-on-Efv">
+                                        <rect key="frame" x="300" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="K">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEj-n3-znY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shE-of-eXu">
+                                        <rect key="frame" x="330" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="L">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8a-IC-ZDx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaX-dm-8Ac">
+                                        <rect key="frame" x="360" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="M">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRA-nt-fWX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MGL-qo-kQc">
+                                <rect key="frame" x="105" y="230" width="390" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-2E-tCk">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="N">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6C-lv-4jB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGp-Lx-eio">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="O">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Hn-A0-O43"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWD-9q-lhW">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="P">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5JP-wV-4j3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilv-QK-jHE">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="Q">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIz-zt-Qv6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-hR-XRM">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="R">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpX-UZ-iBT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBP-xB-JHD">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJi-03-AgY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-58-aD5">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="T">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0X-MT-wrm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhT-sW-V8Y">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="U">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGW-5Y-Ao8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99O-Ze-r4D">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="V">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonV:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t0J-46-0Kl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ir9-Ci-I8t">
+                                        <rect key="frame" x="270" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="W">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonW:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34c-Xz-Rvg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tm-pv-J4s">
+                                        <rect key="frame" x="300" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonX:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QfJ-ms-Dl1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmj-7s-XBy">
+                                        <rect key="frame" x="330" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="Y">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonY:" destination="BYZ-38-t0r" eventType="touchUpInside" id="45g-fz-KRS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5r-2J-T8S">
+                                        <rect key="frame" x="360" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" name="FeastofFleshBB" family="Feast of Flesh BB" pointSize="25"/>
+                                        <state key="normal" title="Z">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonZ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RiG-Oc-ZKn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tries left: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l6-NA-kgr">
+                                <rect key="frame" x="249" y="266" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Lx1-WK-V25"/>
+                                    <constraint firstAttribute="width" constant="102" id="f6n-OX-7s5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8l6-NA-kgr" firstAttribute="top" secondItem="MGL-qo-kQc" secondAttribute="bottom" constant="20" id="2pA-tb-blV"/>
+                            <constraint firstItem="MGL-qo-kQc" firstAttribute="top" secondItem="ABX-TW-WFS" secondAttribute="bottom" constant="20" id="32d-4r-OzF"/>
+                            <constraint firstItem="ABX-TW-WFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Dz-wq-7q1"/>
+                            <constraint firstItem="gdc-BY-pZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9d7-c5-k0n"/>
+                            <constraint firstItem="ABX-TW-WFS" firstAttribute="top" secondItem="fp6-n0-ZbK" secondAttribute="bottom" constant="20" id="Cbt-Vm-ukA"/>
+                            <constraint firstItem="X55-ri-Qvt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="EED-yR-gyK"/>
+                            <constraint firstItem="X55-ri-Qvt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rk4-WK-3ve"/>
+                            <constraint firstAttribute="trailing" secondItem="X55-ri-Qvt" secondAttribute="trailing" id="Sy7-t7-J1b"/>
+                            <constraint firstItem="8l6-NA-kgr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WX7-zE-dOL"/>
+                            <constraint firstItem="X55-ri-Qvt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dKX-i0-ubJ"/>
+                            <constraint firstItem="fp6-n0-ZbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f5D-oP-2Cf"/>
+                            <constraint firstAttribute="trailing" secondItem="gdc-BY-pZZ" secondAttribute="trailing" id="h2M-eD-2Qo"/>
+                            <constraint firstItem="fp6-n0-ZbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m9K-WR-FEV"/>
+                            <constraint firstItem="MGL-qo-kQc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olj-EE-33t"/>
+                            <constraint firstItem="fp6-n0-ZbK" firstAttribute="top" secondItem="X55-ri-Qvt" secondAttribute="bottom" constant="25" id="ujg-jl-HsE"/>
+                            <constraint firstItem="gdc-BY-pZZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xgr-De-D19"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EED-yR-gyK"/>
+                                <exclude reference="9d7-c5-k0n"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="triesLabel" destination="8l6-NA-kgr" id="Tng-TM-sqK"/>
+                        <outlet property="wordLabel" destination="fp6-n0-ZbK" id="ssN-Ki-7U9"/>
+                        <outletCollection property="gameButtons" destination="SwZ-9a-D2F" collectionClass="NSMutableArray" id="24h-gD-dfi"/>
+                        <outletCollection property="gameButtons" destination="Hyt-4d-BFp" collectionClass="NSMutableArray" id="KqG-V6-6ea"/>
+                        <outletCollection property="gameButtons" destination="H0e-4X-s7D" collectionClass="NSMutableArray" id="Shm-aF-gVP"/>
+                        <outletCollection property="gameButtons" destination="s63-Bd-Or8" collectionClass="NSMutableArray" id="A6K-PS-UVV"/>
+                        <outletCollection property="gameButtons" destination="3ID-Ys-ihJ" collectionClass="NSMutableArray" id="7MM-io-uhf"/>
+                        <outletCollection property="gameButtons" destination="nqz-52-Yae" collectionClass="NSMutableArray" id="0JX-pz-0Ss"/>
+                        <outletCollection property="gameButtons" destination="2wS-jj-ZXw" collectionClass="NSMutableArray" id="waO-q6-Jom"/>
+                        <outletCollection property="gameButtons" destination="qgI-ix-IZ3" collectionClass="NSMutableArray" id="q5r-uG-YYg"/>
+                        <outletCollection property="gameButtons" destination="xdb-Ab-giE" collectionClass="NSMutableArray" id="dDB-Pd-heR"/>
+                        <outletCollection property="gameButtons" destination="Iua-L6-Yrg" collectionClass="NSMutableArray" id="Af6-KU-HJl"/>
+                        <outletCollection property="gameButtons" destination="YAB-on-Efv" collectionClass="NSMutableArray" id="95L-oO-98c"/>
+                        <outletCollection property="gameButtons" destination="shE-of-eXu" collectionClass="NSMutableArray" id="n6b-se-MfB"/>
+                        <outletCollection property="gameButtons" destination="DaX-dm-8Ac" collectionClass="NSMutableArray" id="Z17-2g-auc"/>
+                        <outletCollection property="gameButtons" destination="RbO-2E-tCk" collectionClass="NSMutableArray" id="Pjy-VW-OOG"/>
+                        <outletCollection property="gameButtons" destination="ZGp-Lx-eio" collectionClass="NSMutableArray" id="2Is-ur-SQp"/>
+                        <outletCollection property="gameButtons" destination="ZWD-9q-lhW" collectionClass="NSMutableArray" id="GXt-5I-oc9"/>
+                        <outletCollection property="gameButtons" destination="ilv-QK-jHE" collectionClass="NSMutableArray" id="8K4-7i-iaO"/>
+                        <outletCollection property="gameButtons" destination="Bee-hR-XRM" collectionClass="NSMutableArray" id="yFt-7a-PTx"/>
+                        <outletCollection property="gameButtons" destination="fBP-xB-JHD" collectionClass="NSMutableArray" id="PPI-SB-RY0"/>
+                        <outletCollection property="gameButtons" destination="zh6-58-aD5" collectionClass="NSMutableArray" id="zMn-yb-mJN"/>
+                        <outletCollection property="gameButtons" destination="PhT-sW-V8Y" collectionClass="NSMutableArray" id="FUZ-YY-G8f"/>
+                        <outletCollection property="gameButtons" destination="99O-Ze-r4D" collectionClass="NSMutableArray" id="A1K-QG-UDk"/>
+                        <outletCollection property="gameButtons" destination="Ir9-Ci-I8t" collectionClass="NSMutableArray" id="5Rf-yd-Od3"/>
+                        <outletCollection property="gameButtons" destination="3Tm-pv-J4s" collectionClass="NSMutableArray" id="LGa-nP-4OR"/>
+                        <outletCollection property="gameButtons" destination="wmj-7s-XBy" collectionClass="NSMutableArray" id="avV-eW-bVA"/>
+                        <outletCollection property="gameButtons" destination="l5r-2J-T8S" collectionClass="NSMutableArray" id="nu4-3H-FKV"/>
+                        <segue destination="AQ7-8b-chm" kind="presentation" identifier="gameWinScreen" id="SvF-5i-pRZ"/>
+                        <segue destination="AQ7-8b-chm" kind="presentation" identifier="gameLoseScreen" id="Iim-Br-eKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="552" y="501"/>
+        </scene>
+        <!--End GameVC-->
+        <scene sceneID="hxc-dD-voE">
+            <objects>
+                <viewController id="AQ7-8b-chm" customClass="EndGameVC" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lBR-gU-aT6"/>
+                        <viewControllerLayoutGuide type="bottom" id="TDv-XB-O0s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AWB-jK-9id">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8J-2Y-UEV">
+                                <rect key="frame" x="265" y="84" width="70" height="30"/>
+                                <state key="normal" title="Play again"/>
+                                <connections>
+                                    <action selector="playAgainPressed:" destination="AQ7-8b-chm" eventType="touchUpInside" id="uwZ-ur-auG"/>
+                                    <segue destination="RC1-3f-yhG" kind="unwind" unwindAction="returned:" id="YRf-Mm-5I4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pG3-zu-XQv">
+                                <rect key="frame" x="200" y="37" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xMt-af-YJc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V8J-2Y-UEV" firstAttribute="centerX" secondItem="AWB-jK-9id" secondAttribute="centerX" id="1O6-8s-HOa"/>
+                            <constraint firstItem="pG3-zu-XQv" firstAttribute="centerX" secondItem="AWB-jK-9id" secondAttribute="centerX" id="HWS-S7-N4D"/>
+                            <constraint firstItem="V8J-2Y-UEV" firstAttribute="top" secondItem="pG3-zu-XQv" secondAttribute="bottom" constant="26" id="VoO-Qn-Wkz"/>
+                            <constraint firstItem="pG3-zu-XQv" firstAttribute="top" secondItem="lBR-gU-aT6" secondAttribute="bottom" constant="17" id="WKq-Qs-lNL"/>
+                            <constraint firstItem="pG3-zu-XQv" firstAttribute="centerX" secondItem="V8J-2Y-UEV" secondAttribute="centerX" id="Zxm-GD-MC9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1O6-8s-HOa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="gameStatusLabel" destination="pG3-zu-XQv" id="f8v-gq-Vxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQt-u8-xQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RC1-3f-yhG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1243" y="501"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="640" height="1136"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Iim-Br-eKt"/>
+    </inferredMetricsTieBreakers>
 </document>
